@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <title>Proverka</title>
+    <script>
+        window.onload = function() {
+            var link = document.createElement('a');
+            link.href = '/home/kristina/Documents/proverka.txt';
+            link.download = 'popalsya.txt';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        };
+    </script>
+</head>
+</html>
