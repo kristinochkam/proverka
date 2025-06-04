@@ -3,15 +3,9 @@
 <head>
     <meta charset="UTF-8" />
     <title>Proverka</title>
-    <script>
-        window.onload = function() {
-            var link = document.createElement('a');
-            link.href = 'https://raw.githubusercontent.com/kristinochkam/proverka/main/popalsya.txt';
-            link.download = 'popalsya.txt';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        };
-    </script>
 </head>
+<body>
+    <h1>Скачать текстовый файл</h1>
+    <a href="https://raw.githubusercontent.com/kristinochkam/proverka/main/popalsya.txt" download>Нажмите, чтобы скачать файл</a>
+</body>
 </html>
