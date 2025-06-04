@@ -2,10 +2,22 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8" />
-    <title>Proverka</title>
+    <title>Автоматическая загрузка файла</title>
 </head>
 <body>
-    <h1>Скачать текстовый файл</h1>
-    <a href="https://raw.githubusercontent.com/kristinochkam/proverka/main/popalsya.txt" download>Нажмите, чтобы скачать файл</a>
+    <h1>Если скачивание не началось автоматически, нажмите <a id="downloadLink" href="#">здесь</a></h1>
+
+    <script>
+        // Замените эти переменные на ваши данные
+        const fileUrl = "https://raw.githubusercontent.com/kristinochkam/proverka/main/files/popalsya.txt";
+
+        // Создаем временный элемент для скачивания
+        const link = document.createElement('a');
+        link.href = fileUrl;
+        link.download = 'popalsya.txt'; // имя файла для сохранения (можете изменить)
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    </script>
 </body>
 </html>
